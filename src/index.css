@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility Mode overrides for visually impaired users */
+html.accessibility-mode {
+  font-size: 112%; /* Scale up all font measurements */
+}
+
+/* Enforce high-level text contrast and weights */
+html.accessibility-mode * {
+  text-rendering: optimizeLegibility;
+}
+
+html.accessibility-mode p, 
+html.accessibility-mode span, 
+html.accessibility-mode h1, 
+html.accessibility-mode h2, 
+html.accessibility-mode h3, 
+html.accessibility-mode h4, 
+html.accessibility-mode h5, 
+html.accessibility-mode h6 {
+  letter-spacing: 0.01em !important;
+}
+
+html.accessibility-mode .text-zinc-500,
+html.accessibility-mode .text-zinc-450,
+html.accessibility-mode .text-zinc-400,
+html.accessibility-mode .text-zinc-300,
+html.accessibility-mode .text-white\/70,
+html.accessibility-mode .text-white\/80,
+html.accessibility-mode .text-white\/90,
+html.accessibility-mode .text-white\/95 {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+html.accessibility-mode .text-zinc-200,
+html.accessibility-mode .text-zinc-100 {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+html.accessibility-mode .text-indigo-400,
+html.accessibility-mode .text-indigo-300,
+html.accessibility-mode .text-indigo-200 {
+  color: #C7D2FE !important; /* Brighter, high contrast indigo */
+  font-weight: 700 !important;
+}
+
+/* High contrast background overrides instead of low contrast semi-transparent colors */
+html.accessibility-mode .bg-zinc-900\/60,
+html.accessibility-mode .bg-zinc-900\/50,
+html.accessibility-mode .bg-zinc-900\/40,
+html.accessibility-mode .bg-zinc-900\/30,
+html.accessibility-mode .bg-zinc-900\/80,
+html.accessibility-mode .bg-zinc-950\/80,
+html.accessibility-mode .bg-indigo-950\/60,
+html.accessibility-mode .bg-[#1E293B]\/60,
+html.accessibility-mode .bg-[#1E293B]\/95 {
+  background-color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Sharp high contrast borders instead of soft ones */
+html.accessibility-mode .border,
+html.accessibility-mode .border-2,
+html.accessibility-mode .border-white\/5,
+html.accessibility-mode .border-white\/10,
+html.accessibility-mode .border-white\/20,
+html.accessibility-mode .border-indigo-500\/20 {
+  border: 2px solid #FFFFFF !important;
+}
+
+/* Disable backdrop filter blur to avoid visual disorientation for low vision users */
+html.accessibility-mode .backdrop-blur,
+html.accessibility-mode .backdrop-blur-md,
+html.accessibility-mode .backdrop-blur-lg,
+html.accessibility-mode .backdrop-blur-xl {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Increase button accessibility */
+html.accessibility-mode button,
+html.accessibility-mode a {
+  border: 2px solid #FFFFFF !important;
+}
+
+html.accessibility-mode button:hover,
+html.accessibility-mode a:hover {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* Elegant custom scrollbar for dark environment */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.3);
+}
+

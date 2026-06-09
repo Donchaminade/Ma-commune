@@ -1,0 +1,6 @@
+{
+  "name": "Ma Commune - Saint-Venant",
+  "description": "Portail web officiel de la commune de Saint-Venant. Retrouvez vos démarches administratives, actualités locales, l'agenda culturel et le bulletin municipal en ligne.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
